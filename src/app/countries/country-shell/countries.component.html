@@ -1,0 +1,15 @@
+<div class = "container">
+    <h1>Search for a country</h1>
+
+    <form #f = "ngForm">
+        <div class = "form-control">
+            <input type = "search" class = "search" name = "search" [(ngModel)] = "text" placeholder = "Enter country name" (input) = "filterCountries()">
+        </div>
+    </form>
+    <app-countries-list
+    [errorMessage] = "errorMessage$ | async"
+    [selectedCountry] = "selectedCountry$ | async"
+    [countries] = "returnCountries()"
+    (countryWasSelected) = "countrySelected($any($event))"
+    ></app-countries-list>
+</div>

@@ -1,0 +1,63 @@
+table {
+    width: 300px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+table, td {
+    border: 1px solid #eee;
+}
+
+td, th {
+    padding: 7px;
+}
+
+th {
+    text-align: left;
+}
+
+img {
+    width: 100%;
+}
+
+.con {
+    padding: 40px;
+}
+
+.country-details-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 20px;
+}
+
+.block {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+.block-link {
+    color: blue;
+}
+
+.left-overlay {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.translation-header {
+    cursor: pointer;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .country-details-container {
+        display: block;
+    }
+
+    .right-overlay {
+        margin-top: 20px;
+    }
+}

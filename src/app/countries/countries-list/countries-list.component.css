@@ -1,0 +1,17 @@
+.container {
+    padding: 20px 0;
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    row-gap: 20px;
+    column-gap: 5px;
+}
+
+.country-card {
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    cursor: pointer;
+}

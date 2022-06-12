@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.country-header {
+    background-color: #eee;
+}
+
+.country-header-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-icon {
+    width: 20px;
+}
+
+.country-body-detail {
+    border-bottom: 1px solid #999;
+}
+
+.country-body p {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.country-body .country-detail {
+    font-weight: normal;    
+}
+
+.thin {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+}

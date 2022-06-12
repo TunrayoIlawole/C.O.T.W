@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+li, a {
+    text-decoration: none;
+    display: inline-block;
+    color: #999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    color: #999;
+    padding: 5px 40px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin: 0px 10px;
+}
+
+.nav-link:hover {
+    color: #666;
+}

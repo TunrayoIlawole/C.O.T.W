@@ -1,0 +1,15 @@
+<div class = "container">
+    <div class = "card-body" *ngIf="countries">
+        <app-country-item class = "country-card" *ngFor="let country of countries" [country] = "country" [index] = "country.numericCode" (click)="countrySelected(country)">
+
+        </app-country-item>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->

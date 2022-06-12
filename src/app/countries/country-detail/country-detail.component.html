@@ -1,0 +1,145 @@
+<div class = "con">
+    <div class = "block">
+        <span>
+            <a class = "block-link" routerLink = '/countries'>Search</a>
+        </span> / 
+        <span>{{ country.name }}</span>
+    </div>
+    <h1>{{ country.name }}</h1>
+
+    <div class = "country-details-container">
+        <div class = "left-overlay">
+            <div class = "country-detail">
+                <h2>Names</h2>
+                <table>
+                    <tr>
+                        <td>Common</td>
+                        <td>{{ country.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Official</td>
+                        <td>{{ country.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Common (Native)</td>
+                        <td>{{ country.nativeName }}</td>
+                    </tr>
+                    <tr>
+                        <td>Alternative spellings</td>
+                        <td>{{ country.altSpellings.length > 1? country.altSpellings.join(','): country.altSpellings[0] }}</td>
+                    </tr>
+                    <th class = "translation-header" (click) = "clicked = !clicked">Translations 
+                        <span class = "caret">{{ clicked ? '⬆️' : '⬇️'}}</span>
+                    </th>
+                    <tr *ngIf = "clicked">
+                        <td>deu</td>
+                        <td>{{ country.translations.de }}</td>
+                    </tr>
+                    <tr *ngIf = "clicked">
+                        <td>fra</td>
+                        <td>{{ country.translations.fr }}</td>
+                    </tr>
+                    <tr *ngIf = "clicked">
+                        <td>ita</td>
+                        <td>{{ country.translations.it }}</td>
+                    </tr>
+                    <tr *ngIf = "clicked">
+                        <td>jpn</td>
+                        <td>{{ country.translations.ja }}</td>
+                    </tr>
+                    <tr *ngIf = "clicked">
+                        <td>por</td>
+                        <td>{{ country.translations.pt }}</td>
+                    </tr>
+                    <tr *ngIf = "clicked">
+                        <td>spa</td>
+                        <td>{{ country.translations.es }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "country-detail">
+                <h2>Language</h2>
+                <table>
+                    <tr>
+                        <td>Native Language</td>
+                        <td>{{ country.languages[0].nativeName }}</td>
+                    </tr>
+                    <tr>
+                        <th>Languages</th>
+                    </tr>
+                    <tr *ngFor = "let language of country.languages">
+                        <td>{{ language.iso639_2 }}</td>
+                        <td>{{ language.name }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "country-detail">
+                <h2>Geography</h2>
+                <table>
+                    <tr>
+                        <td>Region</td>
+                        <td>{{ country.region }}</td>
+                    </tr>
+                    <tr>
+                        <td>Subregion</td>
+                        <td>{{ country.subregion }}</td>
+                    </tr>
+                    <tr>
+                        <td>Capital</td>
+                        <td>{{ country.capital }}</td>
+                    </tr>
+                    <tr>
+                        <td>Demonym</td>
+                        <td>{{ country.demonym }}</td>
+                    </tr>
+                    <tr>
+                        <td>Lat/Lng</td>
+                        <td>{{ country.latlng.join(',') }}</td>
+                    </tr>
+                    <tr>
+                        <td>Area</td>
+                        <td>{{ country.area }}</td>
+                    </tr>
+                    <tr>
+                        <td>Land borders</td>
+                        <td>{{ country.borders? country.borders.join(','): null }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "country-detail">
+                <h2>Codes</h2>
+                <table>
+                    <tr>
+                        <td>ISO 3166-1 alpha-2</td>
+                        <td>{{ country.alpha2Code }}</td>
+                    </tr>
+                    <tr>
+                        <td>ISO 3166-1 alpha-3</td>
+                        <td>{{ country.alpha3Code }}</td>
+                    </tr>
+                    <tr>
+                        <td>ISO 3166-1 numeric</td>
+                        <td>{{ country.numericCode }}</td>
+                    </tr>
+                    <tr>
+                        <td>International calling code</td>
+                        <td>{{ country.callingCodes.join(',') }}</td>
+                    </tr>
+                    <tr>
+                        <td>ISO 4217 currency code</td>
+                        <td>{{ country.currencies? country.currencies[0].code: null }}</td>
+                    </tr>
+                    <tr>
+                        <td>Top level domain</td>
+                        <td>{{ country.topLevelDomain }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class = "right-overlay">
+            <div class = "flag-container">
+                <img src = "{{ country.flag }}" alt = "{{ country.name }}">
+            </div>
+        </div>
+    </div>
+</div>
